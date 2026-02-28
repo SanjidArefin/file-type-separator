@@ -41,17 +41,17 @@ python file_organizer.py "C:\data\batch1" "C:\data\batch2" --verbose --verify-ha
 ```
 
 ## How It Works
-1. Accepts one or more input folders.
-2. Scans only top-level files in each folder.
-3. Leaves existing subfolders and nested files unchanged.
-4. Detects file category by extension (`video`, `audio`, `image`, `gif`, `text`, `docs`, `archives`, `code`).
-5. Creates only the category subfolders that are needed.
-6. Copies each file to the matching subfolder using a safe chunked temp-file flow.
-7. Handles filename collisions by appending numeric suffixes (`_1`, `_2`, ...).
-8. Verifies copied files (size check by default, SHA-256 with `--verify-hash`).
-9. Deletes original files only after successful verification.
-10. Leaves unknown extensions in the root folder and reports them.
-11. On permission issues, raises explicit errors.
+- Accepts one or more input folders.
+- Scans only top-level files in each folder.
+- Leaves existing subfolders and nested files unchanged.
+- Detects file category by extension (`video`, `audio`, `image`, `gif`, `text`, `docs`, `archives`, `code`).
+- Creates only the category subfolders that are needed.
+- Copies each file to the matching subfolder using a safe chunked temp-file flow.
+- Handles filename collisions by appending numeric suffixes (`_1`, `_2`, ...).
+- Verifies copied files (size check by default, SHA-256 with `--verify-hash`).
+- Deletes original files only after successful verification.
+- Leaves unknown extensions in the root folder and reports them.
+- On permission issues, raises explicit errors.
 
 ## Data Safety Notes
 - Designed for data-loss prevention first.
